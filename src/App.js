@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyles from './GlobalStyles'
+import styled from 'styled-components'
+import Home from './Home'
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<BodyStyled>
+<GlobalStyles/>
+<Home/>
+</BodyStyled>
   );
 }
 
 export default App;
+
+
+const BodyStyled = styled.div`
+  display: grid;
+  grid-template-rows: 48px auto 48px;
+  height: 100vh;
+`
