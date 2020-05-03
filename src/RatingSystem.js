@@ -7,7 +7,7 @@ export default function RatingSystem(){
     
     
     return(
-    <ButtonsStyled>
+    <RatingStyled>
      {[...Array(5)].map((buttons,i) => {
          const ratingValue = i + 1;
          return ( 
@@ -19,20 +19,19 @@ export default function RatingSystem(){
              onClick={()=>setRating(ratingValue)}/>
              <FaSquare
              size={30}
-             color={ratingValue <= rating ? "var(--drei)" : "var(--vier)"}/>
+             color={ratingValue <= rating ? "var(--zwei)" : "var(--vier)"}/>
              
          </LabelStyled>
         
          )
      })}
     
-    
-    </ButtonsStyled>
+    </RatingStyled>
     )
     }
     
 
-const ButtonsStyled = styled.div`
+const RatingStyled = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -40,6 +39,8 @@ const ButtonsStyled = styled.div`
   border:solid white 3px; 
   border-radius:24px;
   background:white;
+  width: 190px;
+  margin-top: 12px;
 `
 
 const RadioButtonHidden = styled.input.attrs({type: 'radio'})`

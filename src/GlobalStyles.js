@@ -1,12 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
+
 export default createGlobalStyle `
 
 :root{
-    --eins: #f2f3af;
-    --zwei: #ffd84f;
-    --drei: #d74126;
-    --vier: #50a0c3;
+    --eins: #8b8069;
+    --zwei: #B7545C;
+    --drei: #81825B;
+    --vier: #A4A59B;
+    --fünf: #1D1E12;
 }
 
 
@@ -16,11 +18,21 @@ export default createGlobalStyle `
     margin: 0;
     padding: 0;
     font-family: 'Baloo Bhaina 2', cursive;
-    
 }
 
 body {
-    color: #1e3d59;
+    background: url("./plants2.jpg");
+    background-size:cover;
+    color: var(--fünf);
+    background-attachment: fixed;
+    overflow: scroll;
+}
+
+main {
+    overflow: scroll;
+    line-height: 1.5;
+    display: grid;
+    justify-content: center;
 }
 
 `

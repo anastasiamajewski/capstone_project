@@ -2,11 +2,14 @@ import React from 'react';
 import GlobalStyles from './GlobalStyles'
 import styled from 'styled-components'
 import Home from './Home'
+import Header from './Header'
+
 
 export function App() {
   return (
 <BodyStyled>
 <GlobalStyles/>
+<Header/>
 <Home/>
 </BodyStyled>
   );
