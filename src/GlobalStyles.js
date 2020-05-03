@@ -1,7 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
-
 export default createGlobalStyle `
+
+:root{
+    --eins: #f2f3af;
+    --zwei: #ffd84f;
+    --drei: #d74126;
+    --vier: #50a0c3;
+}
+
 
 *
 {
@@ -9,18 +16,12 @@ export default createGlobalStyle `
     margin: 0;
     padding: 0;
     font-family: 'Baloo Bhaina 2', cursive;
+    
 }
 
 body {
-    background: #f5f0e1;
     color: #1e3d59;
 }
 
-main {
-    background: cornflowerblue;
-
-    display:grid;
-    justify-content: center;
-}
 `
 
