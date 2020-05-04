@@ -5,7 +5,6 @@ import {FaSquare} from 'react-icons/fa'
 export default function RatingSystem(){
     const [rating, setRating] = useState(null)
     
-    
     return(
     <RatingStyled>
      {[...Array(5)].map((buttons,i) => {
@@ -19,13 +18,11 @@ export default function RatingSystem(){
              onClick={()=>setRating(ratingValue)}/>
              <FaSquare
              size={30}
-             color={ratingValue <= rating ? "var(--zwei)" : "var(--vier)"}/>
+             color={ratingValue <= rating ? "var(--secondary-pink)" : "var(--quaternary-grey)"}/>
              
          </LabelStyled>
-        
          )
      })}
-    
     </RatingStyled>
     )
     }

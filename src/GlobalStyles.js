@@ -4,13 +4,12 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle `
 
 :root{
-    --eins: #8b8069;
-    --zwei: #B7545C;
-    --drei: #81825B;
-    --vier: #A4A59B;
-    --fünf: #1D1E12;
+    --primary-brown: #8b8069;
+    --secondary-pink: #B7545C;
+    --tertiary-green: #81825B;
+    --quaternary-grey: #A4A59B;
+    --quinary-dark: #1D1E12;
 }
-
 
 *
 {
@@ -23,7 +22,7 @@ export default createGlobalStyle `
 body {
     background: url("./plants2.jpg");
     background-size:cover;
-    color: var(--fünf);
+    color: var(--quinary-dark);
     background-attachment: fixed;
     overflow: scroll;
 }

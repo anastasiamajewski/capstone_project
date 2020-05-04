@@ -172,9 +172,9 @@ const StyledMain = styled.main `
 
 const QuestionCard = styled.div`
   padding:36px;
-  border:solid var(--zwei) 2px; 
+  border:solid var(--secondary-pink) 2px; 
   border-radius: 24px;
-  background: var(--eins);
+  background: var(--primary-brown);
   opacity: 0.9;
   box-shadow: 0 4px 6px rgba(0, 0, 0,.4);
   display:flex;

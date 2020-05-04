@@ -12,8 +12,8 @@ return(
 
 const HeaderStyled = styled.header`
   display: flex;
-  background: var(--zwei);
-  color: var(--fünf);
+  background: var(--secondary-pink);
+  color: var(--quinary-dark);
   text-align: center;
   justify-content: space-around;
 `
