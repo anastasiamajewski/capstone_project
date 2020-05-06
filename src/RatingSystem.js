@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 import { FaSquare } from 'react-icons/fa'
 
-export default function RatingSystem() {
-  const [rating, setRating] = useState(null)
-
+export default function RatingSystem({ ratingId, rating, setRating }) {
   return (
     <RatingStyled>
       {[...Array(5)].map((buttons, i) => {
@@ -15,7 +13,7 @@ export default function RatingSystem() {
               type="radio"
               name="rating"
               value={ratingValue}
-              onClick={() => setRating(ratingValue)}
+              onChange={() => setRating(ratingId, ratingValue)}
             />
             <FaSquare
               size={30}
