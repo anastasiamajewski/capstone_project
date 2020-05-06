@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import RatingSystem from './RatingSystem'
 import styled from 'styled-components/macro'
 import questionList from './questions.json'
+import { saveRating, loadRating } from './Localstorage'
 
 export default function Home() {
-  const [questions, setQuestion] = useState([])
+  const [questions, setQuestion] = useState(
+    loadRating('setQuestion') || questionList
+  )
 
   return (
     <StyledMain>
@@ -29,6 +32,7 @@ export default function Home() {
       ...questionList.slice(0, index, -1),
       ...questionList.slice(index, questions.length),
     ])
+    saveRating(question.id, question.rating)
   }
 }
 
