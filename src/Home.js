@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import RatingSystem from './RatingSystem'
 import styled from 'styled-components/macro'
 import questionList from './questions.json'
-import { saveRating, loadRating } from './Localstorage'
+import { saveRating, readRating } from './Localstorage'
 
 export default function Home() {
   const [questions, setQuestion] = useState(
-    loadRating('setQuestion') || questionList
+    readRating('setQuestion') || questionList
   )
 
   return (
