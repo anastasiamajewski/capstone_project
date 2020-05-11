@@ -63,24 +63,3 @@ const QuestionCard = styled.div`
   line-height: 1.2;
   margin-top: 16px;
 `
-
-// export function countRating() {
-//   const returnrating = readRating('id')
-//   {
-//     questionList.map((questions) => {
-//       if (returnrating === 1) {
-//         return 1
-//       } else if (returnrating === 2) {
-//         return 2
-//       } else if (returnrating === 3) {
-//         return 3
-//       } else if (returnrating === 4) {
-//         return 4
-//       } else if (returnrating === 5) {
-//         return 5
-//       } else {
-//         return 'Du hast nicht alle Fragen beantwortet!'
-//       }
-//     })
-//   }
-// }

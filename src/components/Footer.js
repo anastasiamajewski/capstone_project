@@ -11,4 +11,5 @@ const FooterStyled = styled.footer`
   color: var(--quinary-dark);
   text-align: center;
   justify-content: space-around;
+  position: relative;
 `

@@ -28,7 +28,7 @@ export function App() {
 
 export default App
 
-const BodyStyled = styled.div`
+const BodyStyled = styled.main`
   display: grid;
   grid-template-rows: 48px auto 48px;
   height: 100vh;
