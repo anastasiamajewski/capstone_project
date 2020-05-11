@@ -1,30 +1,5 @@
 [
   {
-    "id": 1,
-    "question": "Hast du jemandem einen schönen Tag gewünscht?",
-    "rating": 0
-  },
-  {
-    "id": 2,
-    "question": "Hast du Zeit mit deinem Hobby verbracht?",
-    "rating": 0
-  },
-  {
-    "id": 3,
-    "question": "Hast du dich mit einem/er Freund/Freundin uterhalten?",
-    "rating": 0
-  },
-  {
-    "id": 4,
-    "question": "Hast du deine Lieblingsmusik gehört?",
-    "rating": 0
-  },
-  {
-    "id": 5,
-    "question": "Hast du Komplimente verteilt?",
-    "rating": 0
-  },
-  {
     "id": 6,
     "question": "Hast du soziale Medien bewusst genutzt?",
     "rating": 0

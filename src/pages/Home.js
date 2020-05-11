@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import RatingSystem from './RatingSystem'
+import RatingSystem from '../components/RatingSystem'
 import styled from 'styled-components/macro'
-import questionList from './questions.json'
-import { saveRating, readRating } from './Localstorage'
+import questionList from '../components/questions.json'
+import { saveRating, readRating } from '../components/Localstorage'
+import Button from '../components/RatingButton'
 
 export default function Home() {
   const [questions, setQuestion] = useState(
@@ -11,7 +12,7 @@ export default function Home() {
 
   return (
     <StyledMain>
-      {questionList.map((question) => (
+      {questions.map((question) => (
         <QuestionCard key={question.id}>
           <p>{question.question}</p>
           <RatingSystem
@@ -21,25 +22,29 @@ export default function Home() {
           />
         </QuestionCard>
       ))}
+      <Button />
     </StyledMain>
   )
   function setRating(id, newRating) {
-    const index = questionList.findIndex((question) => question.id === id)
-    const question = questionList[index]
+    const index = questions.findIndex((question) => question.id === id)
+    const question = questions[index]
     question.rating = newRating
     //
     setQuestion([
-      ...questionList.slice(0, index, -1),
-      ...questionList.slice(index, questions.length),
+      ...questions.slice(0, index),
+      question,
+      ...questions.slice(index + 1, questions.length),
     ])
-    saveRating(question.id, question.rating)
+    // sollte durch ein useEffect ersetzt werden
+    saveRating('setQuestion', questions)
   }
 }
 
 const StyledMain = styled.main`
+  overflow: scroll;
   display: grid;
-  justify-content: center;
   text-align: center;
+  justify-items: center;
 `
 
 const QuestionCard = styled.div`
