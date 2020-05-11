@@ -8,7 +8,7 @@ export default function RatingSystem({ ratingId, rating, setRating }) {
       {[...Array(5)].map((buttons, i) => {
         const ratingValue = i + 1
         return (
-          <LabelStyled>
+          <LabelStyled key={ratingId + i}>
             <RadioButtonHidden
               type="radio"
               name="rating"

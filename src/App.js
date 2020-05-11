@@ -1,15 +1,27 @@
 import React from 'react'
 import GlobalStyles from './GlobalStyles'
 import styled from 'styled-components'
-import Home from './Home'
-import Header from './Header'
+import Home from './pages/Home'
+import Header from './components/Header'
+import { Switch, Route } from 'react-router-dom'
+import Ratingresult from './pages/Ratingresult'
+
+import Footer from './components/Footer'
 
 export function App() {
   return (
     <BodyStyled>
       <GlobalStyles />
       <Header />
-      <Home />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/ratingresult">
+          <Ratingresult />
+        </Route>
+      </Switch>
+      <Footer />
     </BodyStyled>
   )
 }
@@ -20,4 +32,5 @@ const BodyStyled = styled.div`
   display: grid;
   grid-template-rows: 48px auto 48px;
   height: 100vh;
+  overflow: scroll;
 `

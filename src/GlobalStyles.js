@@ -26,11 +26,5 @@ body {
     overflow: scroll;
 }
 
-main {
-    overflow: scroll;
-    line-height: 1.5;
-    display: grid;
-    justify-content: center;
-}
 
 `

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "Hast du jemandem einen schönen Tag gewünscht?",
+    "rating": 0
+  },
+  {
+    "id": 2,
+    "question": "Hast du Zeit mit deinem Hobby verbracht?",
+    "rating": 0
+  },
+  {
+    "id": 3,
+    "question": "Hast du dich mit einem/er Freund/Freundin unterhalten?",
+    "rating": 0
+  },
+  {
+    "id": 4,
+    "question": "Hast du deine Lieblingsmusik gehört?",
+    "rating": 0
+  },
+  {
+    "id": 5,
+    "question": "Hast du Komplimente verteilt?",
+    "rating": 0
+  },
+  {
+    "id": 7,
+    "question": "Hast du genug geschlafen?",
+    "rating": 0
+  },
+  {
+    "id": 11,
+    "question": "Hast du genug Wasser getrunken?",
+    "rating": 0
+  },
+  {
+    "id": 14,
+    "question": "Hast du dir Zeit fürs Frühstück genommen?",
+    "rating": 0
+  }
+]
