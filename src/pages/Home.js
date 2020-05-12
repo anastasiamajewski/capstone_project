@@ -3,15 +3,18 @@ import RatingSystem from '../components/RatingSystem'
 import styled from 'styled-components/macro'
 import questionList from '../components/questions.json'
 import { saveRating, readRating } from '../components/Localstorage'
-import Button from '../components/RatingButton'
+import RatingButton from '../components/RatingButton'
 
 export default function Home() {
   const [questions, setQuestion] = useState(
     readRating('setQuestion') || questionList
   )
 
+  const date = new Date()
+
   return (
     <StyledMain>
+      <h2>{date.toLocaleDateString('de-DE')}</h2>
       {questions.map((question) => (
         <QuestionCard key={question.id}>
           <p>{question.question}</p>
@@ -22,7 +25,7 @@ export default function Home() {
           />
         </QuestionCard>
       ))}
-      <Button />
+      <RatingButton />
     </StyledMain>
   )
   function setRating(id, newRating) {
@@ -49,11 +52,12 @@ const StyledMain = styled.main`
 
 const QuestionCard = styled.div`
   padding: 36px;
-  border: solid var(--secondary-pink) 2px;
+  /* border: solid var(--secondary) 2px; */
   border-radius: 24px;
-  background: var(--primary-brown);
+  background: var(--primary);
+  color: var(--quaternary);
   opacity: 0.9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;

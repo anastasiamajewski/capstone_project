@@ -20,7 +20,7 @@ export function countRating() {
 
 const ResultStyled = styled.div`
   border-radius: 24px;
-  background: var(--primary-brown);
+  background: var(--primary);
   opacity: 0.9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   display: flex;
@@ -38,14 +38,15 @@ const CircleStyled = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 32pt;
-  background-color: var(--secondary-pink);
+  background-color: var(--primary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   border-radius: 50px;
   width: 200px;
   height: 200px;
   margin-top: 16px;
 
   &:hover {
-    background-color: var(--primary-brown);
+    background-color: var(--secondary);
   }
 `
 

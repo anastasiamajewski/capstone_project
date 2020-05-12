@@ -3,11 +3,11 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle`
 
 :root{
-    --primary-brown: #8b8069;
-    --secondary-pink: #B7545C;
-    --tertiary-green: #81825B;
-    --quaternary-grey: #A4A59B;
-    --quinary-dark: #1D1E12;
+    --primary: white;
+    --secondary: #FA6E59;
+    --tertiary: #fcecb1;
+    --quaternary: #077dde;
+    --quinary: #F8a055;
 }
 
 *
@@ -19,9 +19,10 @@ export default createGlobalStyle`
 }
 
 body {
-    background: url("./plants2.jpg");
+    /* background: url("./ocean.jpg"); */
+    background: var(--tertiary);
     background-size:cover;
-    color: var(--quinary-dark);
+    color: var(--quaternary);
     background-attachment: fixed;
     overflow: scroll;
 }
