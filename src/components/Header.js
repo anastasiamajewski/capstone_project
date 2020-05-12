@@ -11,8 +11,8 @@ export default function Header() {
 
 const HeaderStyled = styled.header`
   display: flex;
-  background: var(--secondary-pink);
-  color: var(--quinary-dark);
+  background: var(--secondary);
+  color: var(--primary);
   text-align: center;
   justify-content: space-around;
 `

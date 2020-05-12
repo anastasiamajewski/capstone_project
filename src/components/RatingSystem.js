@@ -18,9 +18,7 @@ export default function RatingSystem({ ratingId, rating, setRating }) {
             <FaSquare
               size={30}
               color={
-                ratingValue <= rating
-                  ? 'var(--secondary-pink)'
-                  : 'var(--quaternary-grey)'
+                ratingValue <= rating ? 'var(--secondary)' : 'var(--quaternary)'
               }
             />
           </LabelStyled>
@@ -35,9 +33,9 @@ const RatingStyled = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: solid white 3px;
+  border: solid var(--tertiary) 3px;
   border-radius: 24px;
-  background: white;
+  background: var(--tertiary);
   width: 190px;
   margin-top: 12px;
 `

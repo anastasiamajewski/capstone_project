@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Header from './components/Header'
 import { Switch, Route } from 'react-router-dom'
 import Ratingresult from './pages/Ratingresult'
-
+import Calendaroverview from './pages/Calendaroverview'
 import Footer from './components/Footer'
 
 export function App() {
@@ -19,6 +19,9 @@ export function App() {
         </Route>
         <Route path="/ratingresult">
           <Ratingresult />
+        </Route>
+        <Route path="/calendaroverview">
+          <Calendaroverview />
         </Route>
       </Switch>
       <Footer />
