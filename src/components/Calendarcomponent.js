@@ -3,7 +3,7 @@ import Calendar from 'react-calendar'
 import styled from 'styled-components'
 import { countRating } from '../pages/Ratingresult'
 
-export default function Calendarcomponent() {
+export default function CalendarComponent() {
   const [date, setDate] = useState(new Date())
 
   const onChange = (date) => {
@@ -18,7 +18,7 @@ export default function Calendarcomponent() {
         onChange={onChange}
         value={date}
       />
-      {console.log(date)}
+
       {countRating()}
     </CalendarAreaStyled>
   )

@@ -1,11 +1,11 @@
 import React from 'react'
-import Calendarcomponent from '../components/Calendarcomponent'
+import CalendarComponent from '../components/CalendarComponent'
 import styled from 'styled-components'
 
-export default function Calendaroverview() {
+export default function CalendarOverview() {
   return (
     <StyledMain>
-      <Calendarcomponent />
+      <CalendarComponent />
     </StyledMain>
   )
 }
