@@ -7,6 +7,8 @@ import { Switch, Route } from 'react-router-dom'
 import Ratingresult from './pages/Ratingresult'
 import CalendarOverview from './pages/CalendarOverview'
 import Footer from './components/Footer'
+import Login from './pages/Login'
+import Registration from './pages/Registration'
 
 export function App() {
   return (
@@ -15,12 +17,18 @@ export function App() {
       <Header />
       <Switch>
         <Route exact path="/">
+          <Login />
+        </Route>
+        <Route path="/registration">
+          <Registration />
+        </Route>
+        <Route path="/home">
           <Home />
         </Route>
         <Route path="/ratingresult">
           <Ratingresult />
         </Route>
-        <Route path="/calendarOverview">
+        <Route path="/calendaroverview">
           <CalendarOverview />
         </Route>
       </Switch>
