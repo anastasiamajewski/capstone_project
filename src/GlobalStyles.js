@@ -23,9 +23,7 @@ body {
     background: var(--tertiary);
     background-size:cover;
     color: var(--quaternary);
-    background-attachment: fixed;
     overflow: scroll;
 }
-
 
 `

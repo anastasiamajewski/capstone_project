@@ -12,7 +12,7 @@ import Registration from './pages/Registration'
 
 export function App() {
   return (
-    <BodyStyled>
+    <>
       <GlobalStyles />
       <Header />
       <Switch>
@@ -33,15 +33,8 @@ export function App() {
         </Route>
       </Switch>
       <Footer />
-    </BodyStyled>
+    </>
   )
 }
 
 export default App
-
-const BodyStyled = styled.main`
-  display: grid;
-  grid-template-rows: 48px auto 48px;
-  height: 100vh;
-  overflow: scroll;
-`

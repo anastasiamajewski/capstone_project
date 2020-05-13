@@ -23,9 +23,10 @@ const FooterStyled = styled.footer`
   background: var(--secondary);
   text-align: center;
   justify-content: space-around;
-  position: relative;
+  position: fixed;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  bottom: 0;
 `
 const LinkStyled = styled(NavLink)`
   display: flex;

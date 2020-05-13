@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { object, string } from 'yup'
 import { auth } from './firebase'
-import { ErrorMessage, Field, Form, Formik } from 'formik'
+import { ErrorMessage, Formik } from 'formik'
 import { NavLink } from 'react-router-dom'
 
 import styled from 'styled-components'
@@ -42,7 +42,6 @@ export default function Login() {
   return (
     <>
       <StyledMain>
-        <h1>Login</h1>
         {loginStatus && <UserProfile user={user} />}
         <Formik
           initialValues={{ email: '', password: '' }}
@@ -51,6 +50,7 @@ export default function Login() {
         >
           {({ isSubmitting }) => (
             <FormStyled>
+              <LoginStyled>Login</LoginStyled>
               <FieldStyled type="email" name="email" placeholder="E-Mail" />
               <ErrorMessage name="email" component="div" className="error" />
               <FieldStyled
@@ -79,6 +79,7 @@ const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 18px;
 `
 
 const FormStyled = styled.form`
@@ -112,6 +113,7 @@ const ButtonStyled = styled.button`
   width: 100%;
   border: 0;
   padding: 15px;
+  margin-bottom: 12px;
   color: #ffffff;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
@@ -133,4 +135,8 @@ const LinkStyled = styled(NavLink)`
     background: var(--primary);
     color: var(--secondary);
   }
+`
+const LoginStyled = styled.h1`
+  font-size: 18pt;
+  margin-bottom: 12px;
 `
