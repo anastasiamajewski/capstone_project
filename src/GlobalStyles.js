@@ -5,7 +5,9 @@ export default createGlobalStyle`
 :root{
     --primary: white;
     --secondary: #FA6E59;
+    
     --tertiary: #fcecb1;
+    --tertiary-light: #fff7db;
     --quaternary: #077dde;
     --quinary: #F8a055;
 }
@@ -20,7 +22,7 @@ export default createGlobalStyle`
 
 body {
     /* background: url("./ocean.jpg"); */
-    background: var(--tertiary);
+    background: var(--tertiary-light);
     background-size:cover;
     color: var(--quaternary);
     overflow: scroll;

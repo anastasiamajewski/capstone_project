@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { object, string } from 'yup'
-import { auth } from './firebase'
+import { authentication } from '../services/firebase'
 import { ErrorMessage, Formik } from 'formik'
 import { NavLink } from 'react-router-dom'
+import { initialProfile } from '../services/initialProfile'
 
 import styled from 'styled-components'
 
@@ -15,6 +16,7 @@ export function UserProfile({ user }) {
 }
 
 export default function Login() {
+  const [profile, setProfile] = useState(initialProfile)
   const [user, setUser] = useState({})
   const [loginStatus, setLoginStatus] = useState()
 
@@ -25,7 +27,7 @@ export default function Login() {
 
   function onSubmit(formData) {
     console.log(formData)
-    auth
+    authentication
       .signInWithEmailAndPassword(formData.email, formData.password)
       .then((response) => {
         console.log(response)
@@ -51,26 +53,40 @@ export default function Login() {
           {({ isSubmitting }) => (
             <FormStyled>
               <LoginStyled>Login</LoginStyled>
-              <FieldStyled type="email" name="email" placeholder="E-Mail" />
+              <FieldStyled
+                type="email"
+                name="email"
+                placeholder="E-Mail"
+                value={profile.email}
+                onChange={handleChange}
+              />
               <ErrorMessage name="email" component="div" className="error" />
               <FieldStyled
                 type="password"
                 name="password"
                 placeholder="Passwort"
+                value={profile.password}
+                onChange={handleChange}
               />
               <ErrorMessage name="password" component="div" className="error" />
-              <ButtonStyled type="submit" to="/home" disabled={isSubmitting}>
-                Login
+              <ButtonStyled type="submit" disabled={isSubmitting}>
+                <LinkStyled name="login" to={'/ratingpage'}>
+                  login
+                </LinkStyled>
               </ButtonStyled>
-              <LinkStyled to="/registration">
-                Du hast dich noch nicht registriert? Dann hier entlang!
-              </LinkStyled>
             </FormStyled>
           )}
         </Formik>
+        <LinkStyled to="/registration">
+          Du hast dich noch nicht registriert? <br />
+          Dann hier entlang!
+        </LinkStyled>
       </StyledMain>
     </>
   )
+  function handleChange(event) {
+    setProfile({ ...profile, [event.target.name]: event.target.value })
+  }
 }
 
 const StyledMain = styled.main`
@@ -87,7 +103,7 @@ const FormStyled = styled.form`
   position: relative;
   z-index: 1;
   background: #ffffff;
-  max-width: 360px;
+  max-width: 300px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;

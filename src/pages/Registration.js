@@ -1,8 +1,10 @@
 import React from 'react'
-import { auth } from './firebase'
+import { authentication } from '../services/firebase'
 import { object, string } from 'yup'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik, ErrorMessage } from 'formik'
 import styled from 'styled-components'
+
+import { NavLink } from 'react-router-dom'
 
 export default function Registration() {
   const validationSchema = object().shape({
@@ -12,33 +14,43 @@ export default function Registration() {
 
   function onSubmit(formData) {
     console.log(formData)
-    auth
+    authentication
       .createUserWithEmailAndPassword(formData.email, formData.password)
-      .then((response) => {
-        console.log(response)
+      .then((firebaseResponse) => {
+        console.log(firebaseResponse)
       })
   }
   return (
     <>
       <StyledMain>
-        <h1>Registriere dich hier:</h1>
         <Formik
           initialValues={{ email: '', password: '' }}
           validationSchema={validationSchema}
           onSubmit={onSubmit}
         >
-          {({ isSubmitting }) => (
-            <FormStyled>
-              <FieldStyled type="email" name="email" placeholder="E-Mail" />
+          {({ isSubmitting, values, handleSubmit, handleChange }) => (
+            <FormStyled onSubmit={handleSubmit}>
+              <WelcomeText>Registriere dich hier:</WelcomeText>
+              <FieldStyled
+                onChange={handleChange}
+                value={values.email}
+                type="email"
+                name="email"
+                placeholder="E-Mail"
+              />
               <ErrorMessage name="email" component="div" className="error" />
               <FieldStyled
                 type="password"
                 name="password"
+                onChange={handleChange}
+                value={values.password}
                 placeholder="Passwort (min. 8 Zeichen)"
               />
               <ErrorMessage name="password" component="div" className="error" />
-              <ButtonStyled type="submit" to="/" disabled={isSubmitting}>
-                Registrieren
+              <ButtonStyled type="submit" disabled={isSubmitting}>
+                <LinkStyled name="registration" to={'/ratingpage'}>
+                  registration
+                </LinkStyled>
               </ButtonStyled>
             </FormStyled>
           )}
@@ -54,13 +66,14 @@ const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 18px;
 `
 const FormStyled = styled.form`
   border-radius: 24px;
   position: relative;
   z-index: 1;
   background: #ffffff;
-  max-width: 360px;
+  max-width: 300px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
@@ -69,6 +82,7 @@ const FormStyled = styled.form`
 const FieldStyled = styled.input`
   outline: 0;
   background: #f2f2f2;
+
   border-radius: 24px;
   width: 100%;
   border: 0;
@@ -94,4 +108,19 @@ const ButtonStyled = styled.button`
   &:hover {
     background: #077dde;
   }
+`
+
+const LinkStyled = styled(NavLink)`
+  color: var(--quatenary);
+  justify-content: center;
+  align-content: center;
+
+  &:active {
+    background: var(--primary);
+    color: var(--secondary);
+  }
+`
+const WelcomeText = styled.h1`
+  font-size: 16pt;
+  margin-bottom: 12px;
 `

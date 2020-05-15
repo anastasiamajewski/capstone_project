@@ -5,7 +5,7 @@ import questionList from '../components/questions.json'
 import { saveRating, readRating } from '../components/Localstorage'
 import RatingButton from '../components/RatingButton'
 
-export default function Home() {
+export default function Home({ profile = {} }) {
   const [questions, setQuestion] = useState(
     readRating('setQuestion') || questionList
   )
@@ -16,7 +16,7 @@ export default function Home() {
     <StyledMain>
       <h2>{date.toLocaleDateString('de-DE')}</h2>
       {questions.map((question) => (
-        <QuestionCard key={question.id}>
+        <QuestionCard key={question.id} profile={profile}>
           <p>{question.question}</p>
           <RatingSystem
             rating={question.rating}

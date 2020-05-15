@@ -7,7 +7,7 @@ import { BsCalendar } from 'react-icons/bs'
 export default function Footer() {
   return (
     <FooterStyled>
-      <LinkStyled activeClassName="selected" exact to="/">
+      <LinkStyled activeClassName="selected" exact to="/ratingpage">
         <BsStarFill size={30} color="var(--primary)" />
       </LinkStyled>
 
@@ -23,7 +23,7 @@ const FooterStyled = styled.footer`
   background: var(--secondary);
   text-align: center;
   justify-content: space-around;
-  position: fixed;
+  position: relative;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   bottom: 0;
