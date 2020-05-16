@@ -14,5 +14,7 @@ const HeaderStyled = styled.header`
   background: var(--secondary);
   color: var(--primary);
   text-align: center;
-  justify-content: space-around;
+  justify-content: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 `

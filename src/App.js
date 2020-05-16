@@ -1,31 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import GlobalStyles from './GlobalStyles'
 import styled from 'styled-components'
-import Home from './pages/Home'
+import RatingPage from './pages/RatingPage'
 import Header from './components/Header'
 import { Switch, Route } from 'react-router-dom'
 import Ratingresult from './pages/Ratingresult'
 import CalendarOverview from './pages/CalendarOverview'
 import Footer from './components/Footer'
+import Login from './pages/Login'
+import Registration from './pages/Registration'
+import { initialProfile } from './services/initialProfile'
 
 export function App() {
+  const [profile, setProfile] = useState(initialProfile)
   return (
-    <BodyStyled>
+    <>
       <GlobalStyles />
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/ratingresult">
-          <Ratingresult />
-        </Route>
-        <Route path="/calendarOverview">
-          <CalendarOverview />
-        </Route>
-      </Switch>
-      <Footer />
-    </BodyStyled>
+
+      <BodyStyled>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/registration">
+            <Registration profile={profile} setProfile={setProfile} />
+          </Route>
+          <Route path="/ratingpage">
+            <RatingPage />
+          </Route>
+          <Route path="/ratingresult">
+            <Ratingresult />
+          </Route>
+          <Route path="/calendaroverview">
+            <CalendarOverview />
+          </Route>
+        </Switch>
+        <Footer />
+      </BodyStyled>
+    </>
   )
 }
 
@@ -35,5 +48,5 @@ const BodyStyled = styled.main`
   display: grid;
   grid-template-rows: 48px auto 48px;
   height: 100vh;
-  overflow: scroll;
+  overflow: hidden;
 `
