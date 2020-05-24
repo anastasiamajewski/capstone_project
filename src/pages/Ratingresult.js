@@ -22,7 +22,7 @@ export function countRating() {
 }
 
 const HeadingStyled = styled.h1`
-  font-size: 18pt;
+  font-size: 18px;
   margin-top: 12px;
 `
 
@@ -30,7 +30,7 @@ const CircleStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32pt;
+  font-size: 32px;
   background-color: var(--primary);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   border-radius: 50px;

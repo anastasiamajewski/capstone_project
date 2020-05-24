@@ -116,7 +116,7 @@ const ButtonLinkStyled = styled(NavLink)`
   color: var(--quatenary);
   justify-content: center;
   align-content: center;
-  font-size: 12pt;
+  font-size: 12px;
 
   &:active {
     background: var(--primary);
@@ -124,14 +124,14 @@ const ButtonLinkStyled = styled(NavLink)`
   }
 `
 const WelcomeText = styled.h1`
-  font-size: 16pt;
+  font-size: 16px;
   margin-bottom: 12px;
 `
 const LinkStyled = styled(NavLink)`
   color: var(--quatenary);
   justify-content: center;
   align-content: center;
-  font-size: 10pt;
+  font-size: 10px;
 
   &:active {
     background: var(--primary);

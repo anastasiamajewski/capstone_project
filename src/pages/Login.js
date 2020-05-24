@@ -100,7 +100,6 @@ const StyledMain = styled.main`
 const FormStyled = styled.form`
   border-radius: 24px;
   position: relative;
-
   background: var(--primary);
   max-width: 300px;
   margin: 0 auto 100px;
@@ -146,7 +145,7 @@ const LinkStyled = styled(NavLink)`
   color: var(--quatenary);
   justify-content: center;
   align-content: center;
-  font-size: 12pt;
+  font-size: 12px;
 
   &:active {
     background: var(--primary);
@@ -158,5 +157,5 @@ const LoginStyled = styled.h1`
   margin-bottom: 12px;
 `
 const TextStyled = styled.p`
-  font-size: 10pt;
+  font-size: 10px;
 `

@@ -68,13 +68,12 @@ const EntriesStyled = styled.div`
   background: var(--primary);
   color: var(--quaternary);
   opacity: 0.9;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 350px;
   height: auto;
-  font-size: 1.2em;
+  font-size: 18px;
   line-height: 1.2;
   margin-top: 16px;
   padding: 12px;
@@ -105,13 +104,12 @@ const EntriesOpenStyled = styled.div`
   background: var(--primary);
   color: var(--quaternary);
   opacity: 0.9;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 350px;
   height: auto;
-  font-size: 1.2em;
+  font-size: 18px;
   line-height: 1.2;
   margin-top: 16px;
   margin-bottom: 12px;
