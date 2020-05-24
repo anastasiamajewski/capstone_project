@@ -48,10 +48,14 @@ export default function Registration() {
               />
               <ErrorMessage name="password" component="div" className="error" />
               <ButtonStyled type="submit" disabled={isSubmitting}>
-                <LinkStyled name="registration" to={'/ratingpage'}>
-                  registration
-                </LinkStyled>
+                <ButtonLinkStyled name="registration" to={'/ratingpage'}>
+                  Registrieren
+                </ButtonLinkStyled>
               </ButtonStyled>
+
+              <LinkStyled name="login" to={'/'}>
+                Zurück zum Login
+              </LinkStyled>
             </FormStyled>
           )}
         </Formik>
@@ -70,14 +74,13 @@ const StyledMain = styled.main`
 `
 const FormStyled = styled.form`
   border-radius: 24px;
-  position: relative;
-  z-index: 1;
-  background: #ffffff;
+  background: var(--primary);
   max-width: 300px;
   margin: 0 auto 100px;
+  margin-top: 36px;
   padding: 45px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
 `
 const FieldStyled = styled.input`
   outline: 0;
@@ -95,25 +98,25 @@ const ButtonStyled = styled.button`
   text-transform: uppercase;
   outline: 0;
   border-radius: 24px;
-  background: var(--secondary);
+  background: var(--quaternary);
   width: 100%;
   border: 0;
   padding: 15px;
-  color: #ffffff;
+  color: var(--primary);
   font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
+  margin-bottom: 12px;
   cursor: pointer;
 
   &:hover {
-    background: #077dde;
+    background: var(--secondary);
   }
 `
 
-const LinkStyled = styled(NavLink)`
+const ButtonLinkStyled = styled(NavLink)`
   color: var(--quatenary);
   justify-content: center;
   align-content: center;
+  font-size: 12pt;
 
   &:active {
     background: var(--primary);
@@ -123,4 +126,15 @@ const LinkStyled = styled(NavLink)`
 const WelcomeText = styled.h1`
   font-size: 16pt;
   margin-bottom: 12px;
+`
+const LinkStyled = styled(NavLink)`
+  color: var(--quatenary);
+  justify-content: center;
+  align-content: center;
+  font-size: 10pt;
+
+  &:active {
+    background: var(--primary);
+    color: var(--secondary);
+  }
 `

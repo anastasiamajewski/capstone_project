@@ -1,7 +1,6 @@
 const initialProfile = {
   email: '',
   password: '',
-
   _id: '',
 }
 

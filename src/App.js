@@ -10,9 +10,12 @@ import Footer from './components/Footer'
 import Login from './pages/Login'
 import Registration from './pages/Registration'
 import { initialProfile } from './services/initialProfile'
+import Diary from './pages/Diary'
+import Home from './pages/Home'
 
 export function App() {
   const [profile, setProfile] = useState(initialProfile)
+
   return (
     <>
       <GlobalStyles />
@@ -26,6 +29,9 @@ export function App() {
           <Route path="/registration">
             <Registration profile={profile} setProfile={setProfile} />
           </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
           <Route path="/ratingpage">
             <RatingPage />
           </Route>
@@ -34,6 +40,9 @@ export function App() {
           </Route>
           <Route path="/calendaroverview">
             <CalendarOverview />
+          </Route>
+          <Route path="/diary">
+            <Diary />
           </Route>
         </Switch>
         <Footer />

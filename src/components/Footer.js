@@ -2,17 +2,27 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
 import { BsStarFill } from 'react-icons/bs'
-import { BsCalendar } from 'react-icons/bs'
+import { FaPencilAlt } from 'react-icons/fa'
+import { GiBookCover } from 'react-icons/gi'
+import { RiHomeHeartLine } from 'react-icons/ri'
 
 export default function Footer() {
   return (
     <FooterStyled>
-      <LinkStyled activeClassName="selected" exact to="/ratingpage">
+      <LinkStyled activeClassName="selected" exact to="/home">
+        <RiHomeHeartLine size={30} color="var(--primary)" />
+      </LinkStyled>
+
+      <LinkStyled activeClassName="selected" to="/ratingpage">
         <BsStarFill size={30} color="var(--primary)" />
       </LinkStyled>
 
-      <LinkStyled activeClassName="selected" to="/calendaroverview">
-        <BsCalendar size={30} color="var(--primary)" />
+      <LinkStyled activeClassName="selected" to="/ratingresult">
+        <FaPencilAlt size={30} color="var(--primary)" />
+      </LinkStyled>
+
+      <LinkStyled activeClassName="selected" to="/diary">
+        <GiBookCover size={30} color="var(--primary)" />
       </LinkStyled>
     </FooterStyled>
   )
@@ -36,4 +46,16 @@ const LinkStyled = styled(NavLink)`
   font-size: 0.9em;
   text-decoration: underline;
   align-items: center;
+
+  svg {
+    fill: var(--primary);
+    width: 32px;
+    height: 32px;
+  }
+  &.selected {
+    background: var(--secondary);
+    svg {
+      fill: var(--quaternary);
+    }
+  }
 `

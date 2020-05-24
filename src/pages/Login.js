@@ -70,17 +70,17 @@ export default function Login() {
               />
               <ErrorMessage name="password" component="div" className="error" />
               <ButtonStyled type="submit" disabled={isSubmitting}>
-                <LinkStyled name="login" to={'/ratingpage'}>
+                <LinkStyled name="login" to={'/home'}>
                   login
                 </LinkStyled>
               </ButtonStyled>
+              <TextStyled>
+                Du hast dich noch nicht registriert? Dann{' '}
+                <LinkStyled to="/registration">hier</LinkStyled> entlang!
+              </TextStyled>
             </FormStyled>
           )}
         </Formik>
-        <LinkStyled to="/registration">
-          Du hast dich noch nicht registriert? <br />
-          Dann hier entlang!
-        </LinkStyled>
       </StyledMain>
     </>
   )
@@ -95,19 +95,19 @@ const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 18px;
 `
 
 const FormStyled = styled.form`
   border-radius: 24px;
   position: relative;
-  z-index: 1;
-  background: #ffffff;
+
+  background: var(--primary);
   max-width: 300px;
   margin: 0 auto 100px;
+  margin-top: 36px;
   padding: 45px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
 `
 const FieldStyled = styled.input`
   outline: 0;
@@ -125,7 +125,7 @@ const ButtonStyled = styled.button`
   text-transform: uppercase;
   outline: 0;
   border-radius: 24px;
-  background: var(--secondary);
+  background: var(--quaternary);
   width: 100%;
   border: 0;
   padding: 15px;
@@ -146,6 +146,7 @@ const LinkStyled = styled(NavLink)`
   color: var(--quatenary);
   justify-content: center;
   align-content: center;
+  font-size: 12pt;
 
   &:active {
     background: var(--primary);
@@ -155,4 +156,7 @@ const LinkStyled = styled(NavLink)`
 const LoginStyled = styled.h1`
   font-size: 18pt;
   margin-bottom: 12px;
+`
+const TextStyled = styled.p`
+  font-size: 10pt;
 `

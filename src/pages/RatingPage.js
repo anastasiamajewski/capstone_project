@@ -10,11 +10,8 @@ export default function Home({ profile = {} }) {
     readRating('setQuestion') || questionList
   )
 
-  const date = new Date()
-
   return (
     <StyledMain>
-      <h2>{date.toLocaleDateString('de-DE')}</h2>
       {questions.map((question) => (
         <QuestionCard key={question.id} profile={profile}>
           <p>{question.question}</p>
@@ -55,7 +52,7 @@ const QuestionCard = styled.div`
   /* border: solid var(--secondary) 2px; */
   border-radius: 24px;
   background: var(--primary);
-  color: var(--quaternary);
+  color: var(--secondary);
   opacity: 0.9;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
   display: flex;
