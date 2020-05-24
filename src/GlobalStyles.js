@@ -4,12 +4,13 @@ export default createGlobalStyle`
 
 :root{
     --primary: white;
-    --secondary: #FA6E59;
-    
+    --secondary: #118C8B;
     --tertiary: #fcecb1;
-    --tertiary-light: #fff7db;
-    --quaternary: #077dde;
-    --quinary: #F8a055;
+    --tertiary-light: #fffcf2;
+    --quaternary: #F14D49;
+    --quaternary-light: #F2746B;
+    --quinary: #000D29;
+   
 }
 
 *
@@ -21,11 +22,9 @@ export default createGlobalStyle`
 }
 
 body {
-    /* background: url("./ocean.jpg"); */
     background: var(--tertiary-light);
     background-size:cover;
-    color: var(--quaternary);
+    color: var(--secondary);
     overflow: scroll;
 }
-
 `

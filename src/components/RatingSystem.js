@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { FaSquare } from 'react-icons/fa'
+import { FaStar } from 'react-icons/fa'
 
 export default function RatingSystem({ ratingId, rating, setRating }) {
   return (
@@ -15,11 +15,9 @@ export default function RatingSystem({ ratingId, rating, setRating }) {
               value={ratingValue}
               onChange={() => setRating(ratingId, ratingValue)}
             />
-            <FaSquare
+            <FaStar
               size={30}
-              color={
-                ratingValue <= rating ? 'var(--secondary)' : 'var(--quaternary)'
-              }
+              color={ratingValue <= rating ? 'var(--quaternary)' : 'white'}
             />
           </LabelStyled>
         )
@@ -37,7 +35,8 @@ const RatingStyled = styled.div`
   border-radius: 24px;
   background: var(--tertiary);
   width: 190px;
-  margin-top: 12px;
+  height: 40px;
+  margin-top: 18px;
 `
 
 const RadioButtonHidden = styled.input.attrs({ type: 'radio' })`

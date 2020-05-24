@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import logo from './logolight.png'
 
 export default function Header() {
   return (
     <HeaderStyled>
-      <h1>Rate your day!</h1>
+      <img src={logo} alt="Rate your day!" height="50px" width="auto" />
     </HeaderStyled>
   )
 }
