@@ -1,14 +1,15 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
+import Button from '../components/Button'
 
 export default function RatingButton() {
   return (
     <>
       <div>
-        <ButtonStyled>
+        <Button>
           <LinkStyled to="/ratingresult">Rate it!</LinkStyled>
-        </ButtonStyled>
+        </Button>
       </div>
     </>
   )
@@ -20,20 +21,4 @@ const LinkStyled = styled(NavLink)`
   text-decoration: none;
   color: var(--primary);
   justify-content: center;
-`
-
-const ButtonStyled = styled.button`
-  border-radius: 12px;
-  background: var(--quaternary);
-  opacity: 0.9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 40px;
-  line-height: 1.2;
-  font-size: 20px;
-  margin-top: 16px;
-  margin-bottom: 16px;
 `

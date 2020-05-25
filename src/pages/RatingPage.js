@@ -49,7 +49,6 @@ const StyledMain = styled.main`
 
 const QuestionCard = styled.div`
   padding: 36px;
-  /* border: solid var(--secondary) 2px; */
   border-radius: 24px;
   background: var(--primary);
   color: var(--secondary);

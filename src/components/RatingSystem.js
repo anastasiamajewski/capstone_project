@@ -31,7 +31,7 @@ const RatingStyled = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: solid var(--tertiary) 3px;
+  border: solid var(--quaternary) 3px;
   border-radius: 24px;
   background: var(--tertiary);
   width: 190px;
