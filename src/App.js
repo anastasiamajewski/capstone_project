@@ -5,7 +5,7 @@ import RatingPage from './pages/RatingPage'
 import Header from './components/Header'
 import { Switch, Route } from 'react-router-dom'
 import Ratingresult from './pages/Ratingresult'
-import CalendarOverview from './pages/CalendarOverview'
+
 import Footer from './components/Footer'
 import Login from './pages/Login'
 import Registration from './pages/Registration'
@@ -37,9 +37,6 @@ export function App() {
           </Route>
           <Route path="/ratingresult">
             <Ratingresult />
-          </Route>
-          <Route path="/calendaroverview">
-            <CalendarOverview />
           </Route>
           <Route path="/diary">
             <Diary />
