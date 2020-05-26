@@ -23,9 +23,9 @@ export default function Diary() {
   return (
     <>
       <StyledMain>
-        <HeadingStyled>Dein Tagebuch</HeadingStyled>
+        <HeadingStyled>Deine Tagebucheinträge</HeadingStyled>
         {entry
-          .sort((entryA, entryB) => entryA.text.localeCompare(entryB.text))
+          .sort((entryB, entryA) => entryA.date.localeCompare(entryB.date))
           .map((entry) => (
             <Entries entry={entry} key={entry.id} onDeleteClick={deleteEntry} />
           ))}
@@ -36,8 +36,7 @@ export default function Diary() {
   function deleteEntry(entry) {
     swal({
       title: 'Sicher?',
-      text:
-        'Dein Eintrag wird gelöscht und kann nicht wiederhergestellt werden!',
+      text: 'Versuche nicht deine Vergangenheit zu löschen!',
       icon: 'warning',
       buttons: true,
       dangerMode: true,
@@ -47,9 +46,12 @@ export default function Diary() {
           .doc(entry.id)
           .delete()
           .then(
-            swal('Dein Eintrag wurde gelöscht!', {
-              icon: 'success',
-            })
+            swal(
+              'Ok, dein Eintrag wurde hier gelöscht aber nicht in deinem Gedächtnis!',
+              {
+                icon: 'success',
+              }
+            )
           )
           .catch((error) => alert('Huch, da ist etwas schief gelaufen', error))
       } else {
@@ -67,6 +69,6 @@ const StyledMain = styled.main`
   align-items: center;
 `
 const HeadingStyled = styled.h1`
-  font-size: 18pt;
+  font-size: 18px;
   margin-top: 12px;
 `

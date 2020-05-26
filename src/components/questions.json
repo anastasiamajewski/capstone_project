@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "question": "Hast du jemandem einen schönen Tag gewünscht?",
+    "question": "Hast du dich mit jemandem aus deiner Familie oder mit Freunden unterhalten?",
     "rating": 0
   },
   {
     "id": 2,
-    "question": "Hast du Zeit mit deinem Hobby verbracht?",
+    "question": "Hast du Zeit mit jemandem Verbracht, der dir am Herzen liegt?",
     "rating": 0
   },
   {
     "id": 3,
-    "question": "Hast du dich mit einem/er Freund/Freundin unterhalten?",
+    "question": "Hast du etwas Neues erlebt?",
     "rating": 0
   },
   {
@@ -21,127 +21,92 @@
   },
   {
     "id": 5,
-    "question": "Hast du Komplimente verteilt?",
+    "question": "Hast du jemandem ein Kompliment gemacht oder eins bekommen?",
     "rating": 0
   },
   {
     "id": 6,
-    "question": "Hast du soziale Medien bewusst genutzt?",
+    "question": "Hast du Zeit an der frischen Luft verbracht?",
     "rating": 0
   },
   {
     "id": 7,
-    "question": "Hast du genug geschlafen?",
+    "question": "Hast du genug Schlaf bekommen?",
     "rating": 0
   },
   {
     "id": 8,
-    "question": "Bist du mit einem positiven Gedanken aus dem Bett gestiegen?",
+    "question": "Hast du dich heute genug bewegt?",
     "rating": 0
   },
   {
     "id": 9,
-    "question": "Warst du draußen an der frischen Luft?",
+    "question": "Konntest du Stress vermeiden?",
     "rating": 0
   },
   {
     "id": 10,
-    "question": "Hast du dich genügend bewegt?",
+    "question": "Hattest du deinen Ärger im Griff?",
     "rating": 0
   },
   {
     "id": 11,
-    "question": "Hast du genug Wasser getrunken?",
-    "rating": 0
-  },
-  {
-    "id": 12,
-    "question": "Hast du Sport getrieben?",
-    "rating": 0
-  },
-  {
-    "id": 13,
-    "question": "Konntest du stressige Situationen vemeiden?",
-    "rating": 0
-  },
-  {
-    "id": 14,
     "question": "Hast du dir Zeit fürs Frühstück genommen?",
     "rating": 0
   },
   {
-    "id": 15,
+    "id": 12,
     "question": "Hast du Obst oder Gemüse gegessen?",
     "rating": 0
   },
   {
-    "id": 16,
-    "question": "Konntest du auf Fleisch verzichten?",
-    "rating": 0
-  },
-  {
-    "id": 17,
-    "question": "Hast du dein Essen bewusst genossen ohne Abenkungen?",
-    "rating": 0
-  },
-  {
-    "id": 18,
+    "id": 13,
     "question": "Hast du dir Zeit fürs Kochen genommen?",
     "rating": 0
   },
   {
+    "id": 14,
+    "question": "Konntest du auf ungesunde Sünden verzichten?",
+    "rating": 0
+  },
+  {
+    "id": 15,
+    "question": "Hast du genug Wasser getrunken?",
+    "rating": 0
+  },
+  {
+    "id": 16,
+    "question": "Hast du herzlich gelacht?",
+    "rating": 0
+  },
+  {
+    "id": 17,
+    "question": "Hattest du Zeit für dich selbst?",
+    "rating": 0
+  },
+  {
+    "id": 18,
+    "question": "Hast du etwas neues gelernt?",
+    "rating": 0
+  },
+  {
     "id": 19,
-    "question": "Konntest du auf süße und fettige Sünden vezichten?",
+    "question": "Hast du dir Zeit für deine Lieblingsbeschäftigung genommen?",
     "rating": 0
   },
   {
     "id": 20,
-    "question": "Hast du dir heute ein Kompliment gemacht?",
+    "question": "Hast du dir persönlich etwas schönes gegönnt?",
     "rating": 0
   },
   {
     "id": 21,
-    "question": "Hast du heute herzhaft gelacht?",
+    "question": "Hast du deine Tagesziele erreicht?",
     "rating": 0
   },
   {
     "id": 22,
-    "question": "Hast du dir heute irgendetwas Schönes gegönnt?",
-    "rating": 0
-  },
-  {
-    "id": 23,
-    "question": "Hast du deinen Ärger im Griff gehabt?",
-    "rating": 0
-  },
-  {
-    "id": 24,
-    "question": "Hast du dich heute gelobt für das, was du gechafft hast?",
-    "rating": 0
-  },
-  {
-    "id": 25,
-    "question": "Warst du rechtzeitig bei der Arbeit?",
-    "rating": 0
-  },
-  {
-    "id": 26,
-    "question": "Hast du deine Kollegen freundlich begrüß?",
-    "rating": 0
-  },
-  {
-    "id": 27,
-    "question": "Hast du dich mit deinen Kollegen auch über Privates unterhalten?",
-    "rating": 0
-  },
-  {
-    "id": 28,
-    "question": "Hast du es geschafft deine To-dos für den Arbeitstag zu erledigen?",
-    "rating": 0
-  },
-  {
-    "id": 29,
-    "question": "War deine Laune bei der Arbeit gut?",
+    "question": "Warst du heute zufrieden?",
     "rating": 0
   }
 ]

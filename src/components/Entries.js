@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useToggle } from 'react-hooks-lib'
-import { FaArrowAltCircleDown, FaArrowAltCircleUp } from 'react-icons/fa'
 import { RiDeleteBin5Line } from 'react-icons/ri'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
 
@@ -66,7 +65,6 @@ const EntriesStyled = styled.div`
   border: solid var(--secondary) 2px;
   border-radius: 24px;
   background: var(--primary);
-  color: var(--quaternary);
   opacity: 0.9;
   display: flex;
   flex-direction: column;
@@ -75,7 +73,8 @@ const EntriesStyled = styled.div`
   height: auto;
   font-size: 18px;
   line-height: 1.2;
-  margin-top: 16px;
+  margin-top: 8px;
+  margin-bottom: 2px;
   padding: 12px;
 
   .arrow-icon {
@@ -102,7 +101,7 @@ const EntriesOpenStyled = styled.div`
   border: solid var(--secondary) 2px;
   border-radius: 24px;
   background: var(--primary);
-  color: var(--quaternary);
+  color: var(--secondary);
   opacity: 0.9;
   display: flex;
   flex-direction: column;
@@ -111,8 +110,8 @@ const EntriesOpenStyled = styled.div`
   height: auto;
   font-size: 18px;
   line-height: 1.2;
-  margin-top: 16px;
-  margin-bottom: 12px;
+  margin-top: 8px;
+  margin-bottom: 2px;
   padding: 12px;
 
   .arrow-icon {
