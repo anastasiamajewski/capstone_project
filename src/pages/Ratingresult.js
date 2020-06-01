@@ -16,8 +16,11 @@ export default function Ratingresult() {
 
 export function countRating() {
   const questions = readRating('setQuestion')
-  const sum = questions.reduce((last, item) => last + item.rating, 0)
-  const divided = sum / questions.length
+  const newquestions = readRating('setNewQuestion')
+  const sum =
+    questions.reduce((last, item) => last + item.rating, 0) +
+    newquestions.reduce((last, item) => last + item.rating, 0)
+  const divided = sum / (questions.length + newquestions.length)
   return Math.round(divided * 10) / 10
 }
 

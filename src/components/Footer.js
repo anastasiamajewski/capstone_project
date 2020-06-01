@@ -36,7 +36,7 @@ const FooterStyled = styled.footer`
   position: relative;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  bottom: 0;
+  bottom: 0px;
 `
 const LinkStyled = styled(NavLink)`
   display: flex;

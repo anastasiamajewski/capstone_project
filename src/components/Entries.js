@@ -3,7 +3,6 @@ import React from 'react'
 import { useToggle } from 'react-hooks-lib'
 import { RiDeleteBin5Line } from 'react-icons/ri'
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
-
 import styled from 'styled-components/macro'
 
 Entries.propTypes = {
@@ -29,6 +28,7 @@ export default function Entries({ entry, onDeleteClick }) {
 
               <BsChevronDown
                 size={30}
+                cursor="pointer"
                 onClick={toggle}
                 className="arrow-icon"
               />
@@ -41,7 +41,12 @@ export default function Entries({ entry, onDeleteClick }) {
               <div className="circle">{entry.rating}</div>
               <p> {entry.date}</p>
 
-              <BsChevronUp size={30} onClick={toggle} className="arrow-icon" />
+              <BsChevronUp
+                size={30}
+                cursor="pointer"
+                onClick={toggle}
+                className="arrow-icon"
+              />
             </HeadingOpenStyled>
 
             <div>
@@ -51,6 +56,7 @@ export default function Entries({ entry, onDeleteClick }) {
             <IconsFooterStyled>
               <RiDeleteBin5Line
                 size={30}
+                cursor="pointer"
                 onClick={() => onDeleteClick(entry)}
               />
             </IconsFooterStyled>

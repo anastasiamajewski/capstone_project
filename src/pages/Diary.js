@@ -36,9 +36,8 @@ export default function Diary() {
   function deleteEntry(entry) {
     swal({
       title: 'Sicher?',
-      text: 'Versuche nicht deine Vergangenheit zu löschen!',
       icon: 'warning',
-      buttons: true,
+      buttons: ['Abbrechen', 'Löschen'],
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
@@ -46,16 +45,13 @@ export default function Diary() {
           .doc(entry.id)
           .delete()
           .then(
-            swal(
-              'Ok, dein Eintrag wurde hier gelöscht aber nicht in deinem Gedächtnis!',
-              {
-                icon: 'success',
-              }
-            )
+            swal('Dein Eintrag wurde  gelöscht!', {
+              icon: 'success',
+            })
           )
           .catch((error) => alert('Huch, da ist etwas schief gelaufen', error))
       } else {
-        swal('Dein Eintrag bleibt!')
+        return '0'
       }
     })
   }

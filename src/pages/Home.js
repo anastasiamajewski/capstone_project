@@ -41,9 +41,11 @@ export default function Home() {
           Auf los geht's los! Klicke hier, um deinen Tag zu bewerten:
         </TextStyled>
       </TextArea>
-      <Button>
-        <LinkStyled to="/ratingpage">Rate your day!</LinkStyled>
-      </Button>
+      <div>
+        <Button>
+          <LinkStyled to="/ratingpage">Rate your day!</LinkStyled>
+        </Button>
+      </div>
     </StyledMain>
   )
 }

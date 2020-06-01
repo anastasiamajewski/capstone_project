@@ -1,24 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 import { FaStar } from 'react-icons/fa'
 
-export default function RatingSystem({ ratingId, rating, setRating }) {
+export default function RatingSystem({ ratingIdNew, setRatingNew, ratingNew }) {
+  //const [ratingNew, setRatingNew] = useState(null)
   return (
     <RatingStyled>
       {[...Array(5)].map((stars, i) => {
-        const ratingValue = i + 1
+        const ratingValueNew = i + 1
         return (
-          <LabelStyled key={ratingId + i}>
+          <LabelStyled key={ratingIdNew + i}>
             <RadioButtonHidden
               type="radio"
-              name="rating"
-              value={ratingValue}
-              onChange={() => setRating(ratingId, ratingValue)}
+              name="ratingNew"
+              value={ratingValueNew}
+              onChange={() => setRatingNew(ratingIdNew, ratingValueNew)}
             />
             <FaStar
               size={30}
               cursor="pointer"
-              color={ratingValue <= rating ? 'var(--quaternary)' : 'white'}
+              color={
+                ratingValueNew <= ratingNew ? 'var(--quaternary)' : 'white'
+              }
             />
           </LabelStyled>
         )

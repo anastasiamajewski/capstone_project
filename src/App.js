@@ -12,6 +12,7 @@ import Registration from './pages/Registration'
 import { initialProfile } from './services/initialProfile'
 import Diary from './pages/Diary'
 import Home from './pages/Home'
+import AddQuestion from './pages/AddQuestion'
 
 export function App() {
   const [profile, setProfile] = useState(initialProfile)
@@ -41,6 +42,9 @@ export function App() {
           <Route path="/diary">
             <Diary />
           </Route>
+          <Route path="/addquestion">
+            <AddQuestion />
+          </Route>
         </Switch>
         <Footer />
       </BodyStyled>
@@ -55,4 +59,5 @@ const BodyStyled = styled.main`
   grid-template-rows: 48px auto 48px;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 `

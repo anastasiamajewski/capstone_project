@@ -16,7 +16,6 @@ export default function AddTopic({ countRating }) {
     rating: finalRatingValue,
     text: '',
   })
-  const { date, rating, text } = entry
 
   return (
     <>
